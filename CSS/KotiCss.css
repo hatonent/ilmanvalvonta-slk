@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	font-family: 'Barlow Condensed', sans-serif;
+  
+}
+div.mittari {
+	width: 100%;
+	height: 120;
+}
+div.parempichart {
+	width: 100%;
+	height: 300px;
+	
+}
+p {
+	color: #828282;
+	font-size: 19px;
+}
+
+.special {
+	font-size: 17px;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: white;
+}
+
+#navbar a {
+	float: left;
+	display: block;
+	color: #676767;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 20px 0px;
+	width: 25%;
+}
+
+#navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+#navbar a.active {
+	background-color: #35B3F9;
+	color: white;
+}
+
+.content {
+	padding: 3% 6%;
+	display: block;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%
+}
+
+.sticky + .content {
+	padding-top: 60px;
+}
+
+.bigtext {
+	font-size: 70px;
+}
+
+/*SIDENAV*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.35s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.center {
+	text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 20px;}
+}

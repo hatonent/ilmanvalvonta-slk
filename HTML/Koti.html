@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../CSS/KotiCss.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+<script src="../JAVASCRIPT/NAVJAV.js"></script>
+</head>
+<body>
+
+<div id="navbar">
+  <a class="active" href="#">Koti</a>
+  <a href="#Tyhjä">(Paikka)</a>
+  <a href="#Raportti">Ilmoita</a>
+  <a onclick="openNav()"><span class="special" > &#9776; Luokat</span></a>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <h2 style="color:#818181" class="center">Valitse luokka:</h2>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+  <a class="center" href="#">465</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+  <a class="center" href="#">465</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+  <a class="center" href="#">465</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+  <a class="center" href="#">465</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+  <a class="center" href="#">465</a>
+  <a class="center" href="#">462</a>
+  <a class="center" href="#">463</a>
+  <a class="center" href="#">464</a>
+</div>
+<div id="curve_chart" class="parempichart">
+	</div>
+
+<div class="mittari"  id="chart_div">
+		</div>
+<div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../JAVASCRIPT/tilanne.js"></script>
+<script src="../JAVASCRIPT/linechart.js"></script>
+</body>
+</html>
+
