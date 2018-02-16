@@ -114,3 +114,4 @@ xhttp.open("GET", "http://api.ruonavaara.fi/iot/area/462/latest", true);
 xhttp.send();
 
 // TESTI GITTIIN
+// TESTI 2
