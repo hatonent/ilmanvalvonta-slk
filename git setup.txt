@@ -1,0 +1,20 @@
+GIT-SETUP OHJEET
+
+Jos repo on valmis niin:
+$ git clone <url-osote>
+
+Myös username ja useremail setuppi tarvittaessa:
+$ git config --global user.email "sähkö@posti.fi"
+$ git config --global user.name "nimi"
+
+Ylhäällä olevat commandit muutaa kaikki globaliksi eli ne näkyy kaikille
+Setupin voi tehdä myös tiettyyn repositoryyn:
+$ git config user.email "sähkö@posti.fi"
+$ git config user.name "nimi"
+
+Vahvista vielä muuttamisen jälkeen, että kaikki on oikein
+$ git config user.email
+$ git config user.name
+
+
+
