@@ -1,3 +1,17 @@
+Muokkauksen jälkeen:
+git add .
+git status (optional) (jos näyttää vihreetä, toimii)
+git commit -m "kommentti mitä muutettu"
+git push
+
+Jos joku muu on muokannut:
+git pull
+
+Lisäyshistoria:
+git log
+
+LOGISTA PÄÄSEE POIS PAINAMALLA "Q"
+--------------------------------------------------------------
 GIT-SETUP OHJEET
 
 Jos repo on valmis niin:
@@ -15,6 +29,3 @@ $ git config user.name "nimi"
 Vahvista vielä muuttamisen jälkeen, että kaikki on oikein
 $ git config user.email
 $ git config user.name
-
-
-
