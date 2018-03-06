@@ -100,5 +100,6 @@ historia.onreadystatechange = function () {
 		}
 	}
 };
+
 historia.open("GET", "http://api.ruonavaara.fi/iot/area/5/history?attributes=temperature,humidity,CO2&start=2018-03-05T00:00:00Z&end=2018-03-05T22:00:00Z&groupBy=hour", true);
 historia.send();
