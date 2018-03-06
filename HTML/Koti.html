@@ -7,6 +7,7 @@
 <link href="../CSS/KotiCss.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
 <script src="../JAVASCRIPT/NAVJAV.js"></script>
+
 </head>
 <body>
 
@@ -44,11 +45,17 @@
   <a class="center" href="#">463</a>
   <a class="center" href="#">464</a>
 </div>
+
+
 <div id="curve_chart" class="parempichart">
 	</div>
-
+<div class="center">
+	<button onclick="changeData(1)">Lämpötila</button>
+	<button onclick="changeData(2)">CO2</button>
+	<button onclick="changeData(3)">Ilmankosteus</button>
+</div>
 <div class="mittari"  id="chart_div">
-		</div>
+</div>
 <div>
 	<script>
 window.onscroll = function() {myFunction()};
