@@ -18,8 +18,10 @@ button {
 	font-family: 'Barlow Condensed', sans-serif;
 }
 div.mittari {
-				overflow: hidden;
-				float: left;
+	overflow: hidden;
+	float: none;
+	display: inline-block;
+	margin: auto;
 }
 div.parempichart {
 	width: 100%;
