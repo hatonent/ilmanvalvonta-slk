@@ -2,12 +2,8 @@ var historia = new XMLHttpRequest();
 console.log(historia);
 historia.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
-		// Typical action to be performed when the document is ready:
 		console.log(historia.responseText);
 		var historiaTiedot = JSON.parse(historia.responseText);
-		console.log(historiaTiedot[0].avg.CO2);
-		console.log(historiaTiedot[0].group.hour);
-		console.log(historiaTiedot);
 		historiaTiedot.reverse();
 
 		var tempData = [

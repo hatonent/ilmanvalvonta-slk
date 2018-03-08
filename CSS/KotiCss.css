@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	font-family: 'Barlow Condensed', sans-serif;
-  
+
 }
 button {
 	background-color: #35B3F9;
@@ -18,13 +18,13 @@ button {
 	font-family: 'Barlow Condensed', sans-serif;
 }
 div.mittari {
-	width: 100%;
-	height: 120;
+				overflow: hidden;
+				float: left;
 }
 div.parempichart {
 	width: 100%;
 	height: 300px;
-	
+
 }
 p {
 	color: #828282;
