@@ -86,7 +86,7 @@ xhttp.onreadystatechange = function() {
 	}
 };
 function getData() {
-	xhttp.open("GET", 'http://api.ruonavaara.fi/iot/area/5/latest' , true);
+	xhttp.open("GET", 'http://api.ruonavaara.fi/iot/area/462/latest' , true);
 	xhttp.send();
 }
 
