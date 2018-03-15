@@ -40,7 +40,6 @@ xhttp.onreadystatechange = function() {
 			]);
 
 			var options = {
-
 				min:15, max:30,
 				redFrom: 20, redTo: 22, redColor:'#00FF00',
 				greenFrom: 15, greenTo: 30, greenColor:'#FF0000',

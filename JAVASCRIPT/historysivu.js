@@ -28,9 +28,9 @@ historiaa.onreadystatechange = function () {
 		google.charts.load('current', {
 			'packages': ['corechart']
 		});
-		google.charts.setOnLoadCallback(drawHistorychart);
+		google.charts.setOnLoadCallback(drawTempHistorychart);
 
-		function drawHistorychart() {
+		function drawTempHistorychart() {
 			var data = google.visualization.arrayToDataTable(historyTempData);
 
 			var options = {
@@ -49,57 +49,58 @@ historiaa.onreadystatechange = function () {
 				}
 			};
 
-			console.log(options);
-      /*htmlcontent =
-        document.getElementsByClassName("htmlcontent");
-          for(i = 0; i < htmlcontent.length; i++){
-            htmlcontent[i].style.display = "block";
-          */
-
 			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[0]);
-      chart.draw(data, options);
-      var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[1]);
-      chart.draw(data, options);
-      var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
-
 			chart.draw(data, options);
+		}
 
-			window.changeData = function (a) {
-				if(a == 1){
-					data = google.visualization.arrayToDataTable(historyTempData);
-					options.colors[0] = 'orange';
-					options.vAxis.viewWindow.min = 10;
-					options.vAxis.viewWindow.max = 30;
-					var luku = 5;
-					for (i = 0; i < 5; i++){
-						luku += 5;
-						options.vAxis.ticks[i] = luku;
-					}
+		google.charts.setOnLoadCallback(drawCO2Historychart);
 
-					chart.draw(data, options);
+		function drawCO2Historychart() {
+			var data = google.visualization.arrayToDataTable(historyCO2data);
+
+			var options = {
+				title: 'Tilastot',
+				curveType: 'function',
+				legend: {
+					position: 'bottom'
+				},
+				colors: ['black'],
+				vAxis: {
+					viewWindow: {
+						min: 0,
+						max: 2000
+					},
+					ticks: [0, 500, 1000, 1500, 2000]
 				}
-				else if (a == 2){
-					data = google.visualization.arrayToDataTable(historyCO2data);
-					options.colors[0] = 'black';
-					options.vAxis.viewWindow.min = 0;
-					options.vAxis.viewWindow.max = 2000;
-					for (i = 0; i < 5; i++)  {
-						options.vAxis.ticks[i] = i * 500;
-					}
-					chart.draw(data, options);
+			};
+
+			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[1]);
+			chart.draw(data, options);
+		}
+
+		google.charts.setOnLoadCallback(drawHumidityHistorychart);
+
+		function drawHumidityHistorychart() {
+			var data = google.visualization.arrayToDataTable(historyHumidityData);
+
+			var options = {
+				title: 'Tilastot',
+				curveType: 'function',
+				legend: {
+					position: 'bottom'
+				},
+				colors: ['blue'],
+				vAxis: {
+					viewWindow: {
+						min: 0,
+						max: 100
+					},
+					ticks: [0, 20, 40, 60, 80, 100]
 				}
-				else if (a == 3){
-					data = google.visualization.arrayToDataTable(historyHumidityData);
-					options.colors[0] = 'blue';
-					options.vAxis.viewWindow.min = 0;
-					options.vAxis.viewWindow.max = 100;
-					for (i = 0; i < 6; i++){
-						options.vAxis.ticks[i] = i * 20;
-					}
-					console.log(options.vAxis.ticks);
-					chart.draw(data, options);
-				}
-			}
+			};
+
+			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
+			chart.draw(data, options);
 		}
 	}
 };

@@ -39,6 +39,11 @@ div.historychart {
 	float: left;
 
 }
+@media screen and (max-width:800px) {
+  div.historychart {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
 
 p {
 	color: #828282;
