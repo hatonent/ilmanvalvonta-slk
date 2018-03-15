@@ -42,10 +42,10 @@ historiaa.onreadystatechange = function () {
 				colors: ['orange'],
 				vAxis: {
 					viewWindow: {
-						min: 10,
+						min: 5,
 						max: 35
 					},
-					ticks: [10, 15, 20, 25, 30]
+					ticks: [5,10, 15, 20, 25, 30]
 				}
 			};
 

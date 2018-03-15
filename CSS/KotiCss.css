@@ -79,7 +79,7 @@ p {
 
 	padding: 35px 0px;
 
-	width: 25%;}
+	width: 33.3%;}
 
 #navbar a:hover {
 
@@ -156,6 +156,7 @@ p {
 
 .center {
 	text-align: center;
+	padding-top: 10px;
 }
 
 @media screen and (max-height: 450px) {
