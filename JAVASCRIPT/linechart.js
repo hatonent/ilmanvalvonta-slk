@@ -21,6 +21,12 @@ historia.onreadystatechange = function () {
 
 		historiaTiedot.forEach(function(mittaus) {
 			var tunti = mittaus.group.hour + 2;
+			if (tunti == 24) {
+				tunti = 0;
+			}
+			else if(tunti == 25) {
+				tunti = 1;
+			}
 			tempData.push([tunti.toString() + ":00", mittaus.avg.temperature]);
 			humidityData.push([tunti.toString() + ":00", mittaus.avg.humidity]);
 			CO2data.push([tunti.toString() + ":00", mittaus.avg.CO2]);
@@ -48,7 +54,7 @@ historia.onreadystatechange = function () {
 						min: 10,
 						max: 35
 					},
-					ticks: [10, 15, 20, 25, 30] // display labels every 25
+					ticks: [10, 15, 20, 25, 30]
 				}
 			};
 
@@ -97,6 +103,9 @@ historia.onreadystatechange = function () {
 		}
 	}
 };
+window.getLinechartData = function(hoursback){
+	historia.open("GET", "http://api.ruonavaara.fi/iot/area/5/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
+	historia.send();
+}
 
-historia.open("GET", "http://api.ruonavaara.fi/iot/area/5/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(12, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
-historia.send();
+getLinechartData(12);

@@ -76,12 +76,7 @@ xhttp.onreadystatechange = function() {
 				yellowFrom:1000, yellowTo: 2000, yellowColor: "#ffbb00",
 				minorTicks:5,
 
-
-
-
-
 			};
-
 
 			var chart = new google.visualization.Gauge(document.getElementById('chart_co2'));
 

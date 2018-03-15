@@ -10,10 +10,17 @@
 
 </head>
 <body>
+  <div class=center>
+    <div class="mittari" id="chart_temperature"> </div>
+    <div class="mittari" id="chart_co2"> </div>
+    <div class="mittari" id="chart_humidity"> </div>
+  </div>
+  <div id="curve_chart" class="parempichart">
+  </div>
 
 <div id="navbar">
   <a class="active" href="#">Koti</a>
-  <a href="#Tyhjä">(Paikka)</a>
+  <a href="C:\Users\s1700583\Desktop\GIT\ilmanvalvonta-slk\HTML\history.html">Historia</a>
   <a href="#Raportti">Ilmoita</a>
   <a onclick="openNav()"><span class="special" > &#9776; Luokat</span></a>
 </div>
@@ -47,14 +54,10 @@
   <a class="center" href="#">463</a>
   <a class="center" href="#">464</a>
 </div>
-<div class=center>
-  <div class="mittari" id="chart_temperature"> </div>
-  <div class="mittari" id="chart_co2"> </div>
-  <div class="mittari" id="chart_humidity"> </div>
-</div>
 
-<div id="curve_chart" class="parempichart">
-</div>
+
+
+
 
 <div class="center">
 	<button onclick="changeData(1)">Lämpötila</button>
@@ -67,8 +70,7 @@
 
 <div>
 	<script>
-window.onscroll = function() {myFunction()};
-
+/*
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
@@ -78,7 +80,7 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-}
+}*/
 </script>
 <script>
 function openNav() {
