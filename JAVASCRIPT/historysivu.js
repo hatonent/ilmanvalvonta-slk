@@ -102,12 +102,12 @@ historiaa.onreadystatechange = function () {
 			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
 			chart.draw(data, options);
 		}
-		document.getElementById("demo").innerHTML = "Luokka " + tiedot.areaId;
 	}
 };
-window.getHistorychartData = function(hoursback){
-	historiaa.open("GET", "http://api.ruonavaara.fi/iot/area/5/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=day", true);
+window.getHistorychartData = function(hoursback, luokka){
+	historiaa.open("GET", "http://api.ruonavaara.fi/iot/area/" + luokka + "/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=day", true);
 	historiaa.send();
+	document.getElementById("demo").innerHTML = "Luokka " + luokka;
 }
 
-getHistorychartData(100);
+getHistorychartData(100,5);
