@@ -82,13 +82,14 @@ xhttp.onreadystatechange = function() {
 			chart.draw(data, options);
 
 		}
-
+		document.getElementById("demo").innerHTML = "Luokka " + tiedot.areaId;
 	}
 };
-function getData() {
-	xhttp.open("GET", 'http://api.ruonavaara.fi/iot/area/462/latest' , true);
+window.getData = function(luokka) {
+	xhttp.open("GET", 'http://api.ruonavaara.fi/iot/area/' + luokka + '/latest' , true);
 	xhttp.send();
+
 }
 
-getData();
+getData(462);
 setInterval(getData,60000);

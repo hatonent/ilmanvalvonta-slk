@@ -42,10 +42,10 @@ historiaa.onreadystatechange = function () {
 				colors: ['orange'],
 				vAxis: {
 					viewWindow: {
-						min: 5,
+						min: 10,
 						max: 35
 					},
-					ticks: [5,10, 15, 20, 25, 30]
+					ticks: [10, 15, 20, 25, 30]
 				}
 			};
 
@@ -102,6 +102,7 @@ historiaa.onreadystatechange = function () {
 			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
 			chart.draw(data, options);
 		}
+		document.getElementById("demo").innerHTML = "Luokka " + tiedot.areaId;
 	}
 };
 window.getHistorychartData = function(hoursback){

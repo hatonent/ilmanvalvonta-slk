@@ -104,7 +104,7 @@ historia.onreadystatechange = function () {
 	}
 };
 window.getLinechartData = function(hoursback){
-	historia.open("GET", "http://api.ruonavaara.fi/iot/area/5/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
+	historia.open("GET", "http://api.ruonavaara.fi/iot/area/462/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
 	historia.send();
 }
 
