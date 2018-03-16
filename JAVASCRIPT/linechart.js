@@ -43,7 +43,7 @@ historia.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(tempData);
 
 			var options = {
-				title: 'Tilastot',
+				title: 'Tilanne',
 				curveType: 'function',
 				legend: {
 					position: 'bottom'

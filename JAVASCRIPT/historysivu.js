@@ -34,7 +34,7 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyTempData);
 
 			var options = {
-				title: 'Tilastot',
+				title: 'Lämpötila',
 				curveType: 'function',
 				legend: {
 					position: 'bottom'
@@ -59,7 +59,7 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyCO2data);
 
 			var options = {
-				title: 'Tilastot',
+				title: 'CO2',
 				curveType: 'function',
 				legend: {
 					position: 'bottom'
@@ -84,7 +84,7 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyHumidityData);
 
 			var options = {
-				title: 'Tilastot',
+				title: 'Ilmankosteus',
 				curveType: 'function',
 				legend: {
 					position: 'bottom'
