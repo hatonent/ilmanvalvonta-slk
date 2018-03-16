@@ -77,10 +77,17 @@ historia.onreadystatechange = function () {
 
 			};
 
-			console.log(options);
 			var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-			chart.draw(data, options);
+
+			function resize () {
+				chart.draw(data, options);
+				console.log("resized")
+			}
+			window.onload = resize;
+			resize()
+			window.onresize = resize;
+
 
 			window.changeData = function (a) {
 				if(a == 1){
@@ -125,5 +132,7 @@ window.getLinechartData = function(hoursback){
 	historia.open("GET", "http://api.ruonavaara.fi/iot/area/462/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'hours').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
 	historia.send();
 }
+
+
 
 getLinechartData(12);

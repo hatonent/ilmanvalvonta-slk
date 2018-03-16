@@ -53,6 +53,7 @@ xhttp.onreadystatechange = function() {
 			var chart = new google.visualization.Gauge(document.getElementById('chart_temperature'));
 
 			chart.draw(data, options);
+			
 
 
 		}
