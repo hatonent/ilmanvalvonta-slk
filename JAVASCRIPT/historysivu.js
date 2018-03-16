@@ -34,6 +34,9 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyTempData);
 
 			var options = {
+				titleTextStyle: {
+					fontName: 'Barlow Condensed'
+				},
 				title: 'Lämpötila',
 				curveType: 'function',
 				legend: {
@@ -45,7 +48,21 @@ historiaa.onreadystatechange = function () {
 						min: 10,
 						max: 35
 					},
-					ticks: [10, 15, 20, 25, 30]
+					ticks: [10, 15, 20, 25, 30],
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				hAxis: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				legend: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					},
+					position: 'bottom'
 				}
 			};
 
@@ -59,6 +76,9 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyCO2data);
 
 			var options = {
+				titleTextStyle: {
+					fontName: 'Barlow Condensed'
+				},
 				title: 'CO2',
 				curveType: 'function',
 				legend: {
@@ -70,7 +90,21 @@ historiaa.onreadystatechange = function () {
 						min: 0,
 						max: 2000
 					},
-					ticks: [0, 500, 1000, 1500, 2000]
+					ticks: [0, 500, 1000, 1500, 2000],
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				hAxis: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				legend: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					},
+					position: 'bottom'
 				}
 			};
 
@@ -84,6 +118,9 @@ historiaa.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(historyHumidityData);
 
 			var options = {
+				titleTextStyle: {
+					fontName: 'Barlow Condensed'
+				},
 				title: 'Ilmankosteus',
 				curveType: 'function',
 				legend: {
@@ -95,7 +132,21 @@ historiaa.onreadystatechange = function () {
 						min: 0,
 						max: 100
 					},
-					ticks: [0, 20, 40, 60, 80, 100]
+					ticks: [0, 20, 40, 60, 80, 100],
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				hAxis: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				legend: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					},
+					position: 'bottom'
 				}
 			};
 

@@ -43,6 +43,9 @@ historia.onreadystatechange = function () {
 			var data = google.visualization.arrayToDataTable(tempData);
 
 			var options = {
+				titleTextStyle: {
+					fontName: 'Barlow Condensed'
+				},
 				title: 'Tilanne',
 				curveType: 'function',
 				legend: {
@@ -54,12 +57,27 @@ historia.onreadystatechange = function () {
 						min: 10,
 						max: 35
 					},
-					ticks: [10, 15, 20, 25, 30]
+
+					ticks: [10, 15, 20, 25, 30],
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				hAxis: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					}
+				},
+				legend: {
+					textStyle: {
+						fontName: 'Barlow Condensed'
+					},
+					position: 'bottom'
 				}
+
 			};
 
 			console.log(options);
-
 			var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
 			chart.draw(data, options);
