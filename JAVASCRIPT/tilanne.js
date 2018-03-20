@@ -53,7 +53,7 @@ xhttp.onreadystatechange = function() {
 			var chart = new google.visualization.Gauge(document.getElementById('chart_temperature'));
 
 			chart.draw(data, options);
-			
+
 
 
 		}
@@ -89,8 +89,9 @@ xhttp.onreadystatechange = function() {
 window.getData = function(luokka) {
 	xhttp.open("GET", 'http://api.ruonavaara.fi/iot/area/' + luokka + '/latest' , true);
 	xhttp.send();
-
 }
 
 getData(462);
-setInterval(getData,60000);
+setInterval(function () {
+	getData(462);
+},60000);

@@ -58,21 +58,11 @@ historiaa.onreadystatechange = function () {
 						fontName: 'Barlow Condensed'
 					}
 				},
-				legend: {
-					textStyle: {
-						fontName: 'Barlow Condensed'
-					},
-					position: 'bottom'
-				}
-			};
-			function resizeTemp () {
-				var chart1 = new google.visualization.LineChart(document.getElementsByClassName('historychart')[0]);
-				chart1.draw(data, options);
-			}
-			window.onload = resizeTemp;
-			resizeTemp();
-			window.onresize = resizeTemp;
 
+			};
+
+			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[0]);
+			chart.draw(data, options);
 		}
 
 		google.charts.setOnLoadCallback(drawCO2Historychart);
@@ -112,13 +102,9 @@ historiaa.onreadystatechange = function () {
 					position: 'bottom'
 				}
 			};
-			function resizeCo2 () {
-				var chart2 = new google.visualization.LineChart(document.getElementsByClassName('historychart')[1]);
-				chart2.draw(data, options);
-			}
-			window.onload = resizeCo2;
-			resizeCo2();
-			window.onresize = resizeCo2;
+
+			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[1]);
+			chart.draw(data, options);
 		}
 
 		google.charts.setOnLoadCallback(drawHumidityHistorychart);
@@ -158,14 +144,9 @@ historiaa.onreadystatechange = function () {
 					position: 'bottom'
 				}
 			};
-			function resizeHumidity () {
-				var chart3 = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
-				chart3.draw(data, options);
-			}
-			window.onload = resizeHumidity;
-			resizeHumidity();
-			window.onresize = resizeHumidity;
 
+			var chart = new google.visualization.LineChart(document.getElementsByClassName('historychart')[2]);
+			chart.draw(data, options);
 		}
 	}
 };
@@ -175,4 +156,4 @@ window.getHistorychartData = function(hoursback, luokka){
 	document.getElementById("demo").innerHTML = "Luokka " + luokka;
 }
 
-getHistorychartData(7,5);
+getHistorychartData(7,462);
