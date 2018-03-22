@@ -151,7 +151,7 @@ historiaa.onreadystatechange = function () {
 	}
 };
 window.getHistorychartData = function(hoursback, luokka){
-	historiaa.open("GET", "http://api.ruonavaara.fi/iot/area/" + luokka + "/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'days').format() + "&end=" + moment().utc().format() + "&groupBy=day", true);
+	historiaa.open("GET", "http://api.ruonavaara.fi/iot/area/" + luokka + "/history?attributes=temperature,humidity,CO2&start=" + moment().utc().subtract(hoursback, 'days').format() + "&end=" + moment().utc().format() + "&groupBy=hour", true);
 	historiaa.send();
 	document.getElementById("demo").innerHTML = "Luokka " + luokka;
 }
