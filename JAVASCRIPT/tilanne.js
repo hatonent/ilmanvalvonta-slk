@@ -18,9 +18,9 @@ xhttp.onreadystatechange = function() {
 
 			var options = {
 				min:0, max:100,
-				redFrom: 30, redTo: 60, redColor:'#00FF00',
+				redFrom: 35, redTo: 50, redColor:'#00FF00',
 				greenFrom: 0, greenTo: 100, greenColor:'#FF0000',
-				yellowFrom:25, yellowTo: 70, yellowColor: "#ffbb00",
+				yellowFrom:28, yellowTo: 60, yellowColor: "#ffbb00",
 				minorTicks: 5,
 			};
 
